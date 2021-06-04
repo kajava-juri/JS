@@ -1,14 +1,10 @@
-let img = document.querySelector('img');
+let myImage = document.querySelector('img');
 
-img.onclick = function()
-    {
-        let src = img.getAttribute('src');
-        if(src === 'images/conflict.png')
-        {
-            img.setAttribute('src', 'beginner-html-site-styled-gh-pages/images/firefox-icon.png');
-        }
-        else
-        {
-            img.setAttribute('src', 'beginner-html-site-styled-gh-pages/images/conflict.png')
-        }
+myImage.onclick = function() {
+    let mySrc = myImage.getAttribute('src');
+    if(mySrc === 'images/firefox-icon.png') {
+      myImage.setAttribute('src','images/conflict.png');
+    } else {
+      myImage.setAttribute('src','images/firefox-icon.png');
     }
+}
