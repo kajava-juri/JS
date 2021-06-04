@@ -1,4 +1,4 @@
-let img = document.querySelector('image');
+let img = document.querySelector('img');
 
 img.onclick = function()
     {
