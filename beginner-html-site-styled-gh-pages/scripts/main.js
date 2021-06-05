@@ -49,7 +49,7 @@ promptButton.onclick = function(){
     setUserName();
   } else{
     let myNameNew = prompt('You already have a username. Do you want to change it?');
-    if(myNameNew !== 'no' && myNameNew != 'No' && myNameNew != 'NO'){
+    if(myNameNew !== 'no' || myNameNew != 'No' || myNameNew != 'NO'){
       myName = myNameNew;
       storedName = localStorage.setItem('name', myName);
       myHeading.textContent = 'Hello, ' + storedName;
