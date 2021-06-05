@@ -35,7 +35,7 @@ alertButton.onclick = function() {
 function setUserName() {
   let myName = prompt('Please enter your name.');
   if(!myName) {
-    setUserName();
+    myName = 'anonymous';
   } else {
     localStorage.setItem('name', myName);
   }
