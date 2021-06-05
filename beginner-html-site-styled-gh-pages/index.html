@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <h1>Fox</h1>
+    <h1>Hello, [your username will be here]</h1>
 
     <style>
       #yo{
@@ -17,22 +17,39 @@
         text-shadow: 3px 3px 1px black;
         font-size: 80px;
         bottom: 650px;
-        left: 125px;
+        left: 700px;
       }
       #yo2{
         position: fixed;
+        padding: 20px 0;
         color: #00539F;
         font-size: 20px;
-        bottom: 715px;
-        left: 110px;
+        bottom: 690px;
+        left: 670px;
       }
     </style>
 
 
-    <div id="yo">&rarr;</div>
-    <div id="yo2">Click the Firefox</div>
 
+    <div>
+      <div id="yo">&rarr;</div>
+      <div id="yo2" class='arrowText'>Click the Firefox</div>
+    </div>
+    
     <img src="images/firefox-icon.png">
+
+    <ul>
+      <li>
+        <button class="alert">Alert button</button>
+      </li>
+      <li>
+        <div>
+          <label>This button will call a prompt &rarr;</label>
+          <button class="prompt">set a username</button>
+        </div>
+      </li>
+    </ul>
+
     <script src="scripts/main.js"></script>
 
   </body>
