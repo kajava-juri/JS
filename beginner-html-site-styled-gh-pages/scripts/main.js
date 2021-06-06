@@ -4,11 +4,6 @@ let myImage = document.querySelector('img');
 
 let txt = document.querySelector('.arrowText');
 
-//if namee is already stored, sets it into the first heading
-if(localStorage.getItem('name')) {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Hello, ' + storedName;
-}
 
 // changes the image on every click event
 myImage.onclick = function() {
@@ -22,38 +17,52 @@ myImage.onclick = function() {
     }
 }
 
-
-
 let alertButton = document.querySelector('.alert');
 let promptButton = document.querySelector('.prompt');
+let resetButton = document.querySelector('.reset');
 
 alertButton.onclick = function() {
   alert('Hello!');
 }
 
+
+if(localStorage.getItem('name')) {
+  let storedName = localStorage.getItem('name');
+  myHeading.textContent = 'Hello, ' + storedName;
+}
+
 //calls a prompt for username
 function setUserName() {
   let myName = prompt('Please enter your name.');
-  if(!myName) {
+  if(myName == null || myName == "") {
     myName = 'anonymous';
+    storedName = localStorage.setItem('name', myName);
   } else {
-    localStorage.setItem('name', myName);
+    storedName = localStorage.setItem('name', myName);
   }
-  
-  //myHeading.textContent = 'Hello, ' + myName;
+  location.reload();
+
 }
 
 //if on click the name is stored - do nothing, if it is then call the function
 promptButton.onclick = function(){
+  let c = 0;
   if(!localStorage.getItem('name')) {
     setUserName();
-  } else{
-    let myNameNew = prompt('You already have a username. Do you want to change it?');
-    if(myNameNew !== 'no' || myNameNew != 'No' || myNameNew != 'NO'){
-      myName = myNameNew;
-      storedName = localStorage.setItem('name', myName);
-      myHeading.textContent = 'Hello, ' + storedName;
-    }
-
+    c++;
   }
+  if(c == 0) {
+    let myNameNew = prompt('You already have a username. Change it by typing a new one or click cancel.'); 
+    c++;
+  }  if(nyNameNew == 'no' || nyNameNew == 'No' || nyNameNew == 'nO' || nyNameNew == 'NO' || myNameNew == null) {
+    myNameNew = storedName;
+  } 
+  myName = myNameNew;
+  storedName = localStorage.setItem('name', myName);
+  location.reload();
+}
+
+resetButton.onclick = function(){
+  localStorage.clear('name');
+  location.reload();
 }
