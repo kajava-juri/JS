@@ -46,18 +46,19 @@ function setUserName() {
 
 //if on click the name is stored - do nothing, if it is then call the function
 promptButton.onclick = function(){
-  let c = 0;
+  let c = 1;
   if(!localStorage.getItem('name')) {
     setUserName();
     c++;
   }
-  if(c == 0) {
-    let myNameNew = prompt('You already have a username. Change it by typing a new one or click cancel.'); 
-    c++;
-  }  if(nyNameNew == 'no' || nyNameNew == 'No' || nyNameNew == 'nO' || nyNameNew == 'NO' || myNameNew == null) {
-    myNameNew = storedName;
+  if(localStorage.getItem('name') && c == 1) {
+    let myNameNew = prompt('You already have a username. Change it by typing a new one or click cancel.');
+    
+    if(myNameNew) {
+      myName = myNameNew;
+    }
   } 
-  myName = myNameNew;
+  
   storedName = localStorage.setItem('name', myName);
   location.reload();
 }
@@ -66,3 +67,90 @@ resetButton.onclick = function(){
   localStorage.clear('name');
   location.reload();
 }
+
+//Guess the number game
+
+let rng = Math.floor(Math.random() * 100) + 1;
+
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.getElementById('guessField');
+
+let guessCount = 1;
+let reset;
+
+function checkGuess() {
+  let userGuess = Number(guessField.value);
+  if(guessCount === 1) {
+    guesses.textContent = 'Guesses: ';
+  }
+  guesses.textContent += userGuess + '|';
+
+  if(userGuess == rng){
+    lastResult.textContent = 'You guessed it!';
+    lastResult.style.backgroundColor = 'green';
+    lowOrHi.textContent = ' ';
+    setGameOver();
+  }
+  else if (guessCount == 10) {
+    lastResult.textContent = 'Out of tries (10/10)';
+    lastResult.style.backgroundColor = 'Red';
+    setGameOver();
+  }
+  else {
+    lastResult.textContent = 'Wrong!';
+    lastResult.style.backgroundColor = 'Red';
+    if(userGuess > rng) {
+      lowOrHi.textContent = "It's lower";
+    }
+    if(userGuess < rng) {
+      lowOrHi.textContent = "It's higher";
+    }
+  }
+  guessCount++;
+  guessField.value = userGuess;
+}
+
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = 'Start new game';
+  let place = document.querySelector('.resetBtn');
+  place.append(resetButton);
+  resetButton.addEventListener('click', resetGame);
+}
+
+function resetGame() {
+  guessCount = 1;
+
+  const resetParas = document.querySelectorAll('.resultParas p');
+  for (let i = 0 ; i < resetParas.length ; i++) {
+    resetParas[i].textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+
+  lastResult.style.backgroundColor = 'white';
+
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
+
+guessSubmit.addEventListener('click', checkGuess);
+
+let list = document.querySelector('.listOfNumbers');
+ulElement = document.createElement('li');
+let iniBtn = document.querySelector('.Initialize');
+
+iniBtn.onclick = function(){
+  list.append(ulElement);
+}
+

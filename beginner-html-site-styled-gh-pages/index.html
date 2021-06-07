@@ -22,19 +22,13 @@
       #yo2{
         position: fixed;
         padding: 20px 0;
-        color: #00539F;
+        color: #33ff00;
         font-size: 20px;
         bottom: 690px;
         left: 670px;
       }
     </style>
 
-
-
-    <div>
-      <div id="yo">&rarr;</div>
-      <div id="yo2" class='arrowText'>Click the Firefox</div>
-    </div>
     
     <img src="images/firefox-icon.png">
 
@@ -54,6 +48,39 @@
       </li>
     </ul>
 
+    <style>
+      label {
+        font-size: 20px;
+        line-height: 2;
+        letter-spacing: 1px;
+      }
+    </style>
+
+    <h1>Guess the number game!</h1>
+    <h3>=================================================================================================================================================</h3>
+    <h2>A random number between 1 and 100 has bee chosen. There will be hints if your gess was too high or low.</h2>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" id="guessField" class="form-control" placeholder="1-100">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+    <div class="resetBtn"></div>
+
+    <h2>Just for testing.
+      <br>A for loop with random numbers 1-100
+    </h2>
+    <button class="Initialize">Initialize</button>
+    <ul class="listOfNumbers">
+      
+    </ul>
+    
     <script src="scripts/main.js"></script>
 
   </body>
