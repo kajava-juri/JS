@@ -33,11 +33,9 @@ body {
   counter-reset: section;
 }
 
-li{
-  list-style-type: none;
-  }
   
   li.rgNumbers:before{
+    list-style-type: none;
     counter-increment: section;
     content: counter(section)') \2022';
   }

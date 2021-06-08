@@ -186,3 +186,12 @@ delBtn.onclick = function(){
   }
 }
 
+//================Cloning===================
+
+var item = document.getElementById('fromClone');
+var clone = item.cloneNode(true);
+var clnButton = document.getElementById('clnButton');
+
+clnButton.onclick = function(){
+  document.getElementById('toClone').appendChild(clone);
+}
