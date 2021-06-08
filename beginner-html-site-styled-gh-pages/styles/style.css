@@ -39,7 +39,8 @@ body {
     counter-increment: section;
     content: counter(section)') \2022';
   }
-  ul{
+  ul.rgNumbers{
+    list-style-type: none;
     counter-reset: section;
   }
 
