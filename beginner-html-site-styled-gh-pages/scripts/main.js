@@ -98,10 +98,11 @@ function checkGuess() {
   else if (guessCount == 10) {
     lastResult.textContent = 'Out of tries (10/10)';
     lastResult.style.backgroundColor = 'Red';
+    lowOrHi.textContent = "The number was: " + rng;
     setGameOver();
   }
   else {
-    lastResult.textContent = 'Wrong!';
+    lastResult.textContent = 'Wrong! (' + guessCount + '/10)';
     lastResult.style.backgroundColor = 'Red';
     if(userGuess > rng) {
       lowOrHi.textContent = "It's lower";
@@ -146,11 +147,41 @@ function resetGame() {
 
 guessSubmit.addEventListener('click', checkGuess);
 
-let list = document.querySelector('.listOfNumbers');
-ulElement = document.createElement('li');
+let list = document.querySelectorAll('.listOfNumbers li');
 let iniBtn = document.querySelector('.Initialize');
+let randomNb;
+
+let iniBtn2 = document.querySelector('.Initialize2');
+let liElement;
+let liLabel;
+let list2 = document.querySelector('.listOfNumbers2');
 
 iniBtn.onclick = function(){
-  list.append(ulElement);
+  for(let y = 0; y < list.length; y++) {
+    randomNb = Math.floor(Math.random() * 100) + 1;
+    list[y].textContent = randomNb;
+    list[y].setAttribute('class', 'rgNumbers');
+  }
 }
 
+const c = 0;
+iniBtn2.onclick = function(){
+  for(let y = 0; y < 10; y++) {
+    randomNb = Math.floor(Math.random() * 100) + 1;
+    liElement = document.createElement('li');
+    liElement.setAttribute('name','generatedLi');
+    liElement.setAttribute('class', 'rgNumbers');
+    liElement.textContent = randomNb;
+    list2.append(liElement);
+  }
+}
+
+let delBtn = document.querySelector('.del');
+
+delBtn.onclick = function(){
+  var allLiElements = document.getElementsByName('generatedLi');
+  while(allLiElements.length > 0) {
+    allLiElements[0].remove();
+    allLiElements[0].parentNode.removeChild(allLiElements[0]);
+  }
+}

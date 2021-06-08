@@ -16,6 +16,7 @@ p, li {
 }
 
 
+
 html {
   background-color: #140d74;
 }
@@ -26,7 +27,20 @@ body {
   background-color: #3c9cc5;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
+  counter-reset: section;
 }
+
+li{
+  list-style-type: none;
+  }
+  
+  li.rgNumbers:before{
+    counter-increment: section;
+    content: counter(section)') \2022';
+  }
+  ul{
+    counter-reset: section;
+  }
 
 h1 {
   margin: 0;
