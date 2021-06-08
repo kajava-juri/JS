@@ -161,6 +161,7 @@ iniBtn.onclick = function(){
     randomNb = Math.floor(Math.random() * 100) + 1;
     list[y].textContent = randomNb;
     list[y].setAttribute('class', 'rgNumbers');
+      list[y].setAttribute('id', 'rgNumbers');
   }
 }
 
@@ -171,6 +172,7 @@ iniBtn2.onclick = function(){
     liElement = document.createElement('li');
     liElement.setAttribute('name','generatedLi');
     liElement.setAttribute('class', 'rgNumbers');
+    liElement.setAttribute('id', 'rgNumbers');
     liElement.textContent = randomNb;
     list2.append(liElement);
   }
