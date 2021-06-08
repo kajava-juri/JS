@@ -185,3 +185,4 @@ delBtn.onclick = function(){
     allLiElements[0].parentNode.removeChild(allLiElements[0]);
   }
 }
+

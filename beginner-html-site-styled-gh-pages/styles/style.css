@@ -15,7 +15,10 @@ p, li {
   letter-spacing: 1px;
 }
 
-
+a {
+  color: #33ff00;
+  font-size: 20px;
+}
 
 html {
   background-color: #140d74;
