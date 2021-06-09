@@ -10,10 +10,10 @@ myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/firefox-icon.png') {
       myImage.setAttribute('src','images/firefox2.png');
-      txt.textContent = 'Click the Energy';
+      //txt.textContent = 'Click the Energy';
     } else {
       myImage.setAttribute('src','images/firefox-icon.png');
-      txt.textContent = 'Click the Firefox';
+      //txt.textContent = 'Click the Firefox';
     }
 }
 
@@ -194,4 +194,32 @@ var clnButton = document.getElementById('clnButton');
 
 clnButton.onclick = function(){
   document.getElementById('toClone').appendChild(clone);
+}
+
+//==================Countries===========================
+
+const countries = document.querySelector('.countries');
+var countriesCount = countryList.length;
+let countryElement;
+
+for(let i = 0; i < countriesCount; i++){
+    countryElement = document.createElement('option');
+    countryElement.setAttribute('value', countryList[i]);
+    countryElement.textContent = countryList[i];
+    countries.append(countryElement);
+}
+
+
+const saveCountry = document.getElementById('setCountry');
+
+if(document.getElementById('userCountry').getAttribute('value') == null && localStorage.getItem('country')){
+  document.getElementById('userCountry').textContent = 'from ' + localStorage.getItem('country');
+}
+
+saveCountry.onclick = function(){
+  if(localStorage.getItem('country') != null){
+
+    let userCountry = document.getElementById('userCountry').getAttribute('value');
+    localStorage.setItem('country', userCountry)
+  }
 }

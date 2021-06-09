@@ -5,10 +5,12 @@
     <title>My test page</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body>
 
-    <h1>Hello, [your username will be here]</h1>
+    <h1 >Hello, [your username will be here]</h1>
+    <h1 id='userCountry'>from [your chosen country will be here]</h1>
 
     <style>
       #yo{
@@ -129,7 +131,26 @@
 
     </div>
 
-    <script src="scripts/main.js"></script>
+    <h1>List of countries</h1>
+    <label for="countries">Choose a country:</label>
+
+    <select class="countries">
+      
+    </select>
+    <button id="setCountry">Save your country</button>
+
+    <script>
+      $(document).ready(function(){
+        $("select.countries").change(function(){
+          var selectedCountry = $(this).children("option:selected").val();
+          document.getElementById('userCountry').textContent = 'from ' + selectedCountry;
+          document.getElementById('userCountry').setAttribute('value', selectedCountry);
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="gameresults/countries.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 
   </body>
 </html>
