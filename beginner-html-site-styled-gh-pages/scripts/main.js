@@ -219,7 +219,12 @@ if(document.getElementById('userCountry').getAttribute('value') == null && local
 saveCountry.onclick = function(){
   if(document.getElementById('userCountry').getAttribute('value') == null){
     document.getElementById('userCountry').setAttribute('value', 'Afghanistan');
+    let q = true;
   }
   let userCountry = document.getElementById('userCountry').getAttribute('value');
   localStorage.setItem('country', userCountry)
+  if(q){
+    location.reload();
+    q = false;
+  }
 }
