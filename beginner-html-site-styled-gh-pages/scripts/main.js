@@ -217,9 +217,6 @@ if(document.getElementById('userCountry').getAttribute('value') == null && local
 }
 
 saveCountry.onclick = function(){
-  if(localStorage.getItem('country') == null){
-
-    let userCountry = document.getElementById('userCountry').getAttribute('value');
-    localStorage.setItem('country', userCountry)
-  }
+  let userCountry = document.getElementById('userCountry').getAttribute('value');
+  localStorage.setItem('country', userCountry)
 }
