@@ -55,3 +55,26 @@ img {
   margin: 0 auto;
 }
 
+.one {
+  float: left;
+  position: relative;
+  left: 20%;
+  
+}
+
+.one > h1{
+  font-size: 80px;
+  color: #33ff00;
+}
+
+.one > span{
+  font-size: 20px;
+
+}
+
+.two {
+  position: relative;
+    left: -45px;
+    
+}
+

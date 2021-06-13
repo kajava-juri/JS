@@ -3,21 +3,25 @@
     <head>
         <title>Load JSON File Locally</title>
 
+        <link href="style/styles.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <p class="place"></p>
 
+        <div id="main" class="main">
+
+        </div>
+        
+        
         <div>
-            <button class="countryButton">Press to get a list of countries</button>
+            <button class="countryButton" onclick="cntrBtn()">Press to get a list of countries</button>
             <button class="cdel">Remove</button>
             <ul class="lisOfCountries">
 
             </ul>
         </div>
-
-
-
         <script type="text/javascript" src="countries.js"></script>
+        <script type="text/javascript" src="../scripts/theGame.js"></script>
         <script type="text/javascript" src="scripts/gameMain.js"></script>
     </body>
 </html>
