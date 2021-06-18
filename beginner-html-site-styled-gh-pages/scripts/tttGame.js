@@ -123,6 +123,7 @@ function winCheck(player){
         winLose = true;
         gameOver();
     }
+    console.log(pTurn);
 }
 function gameOver(){
     saveData();
