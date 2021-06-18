@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
@@ -60,8 +58,26 @@
       }
     </style>
 
+    <h1>List of countries</h1>
+    <label for="countries">Choose a country:</label>
+
+    <select class="countries">
+      
+    </select>
+    <button id="setCountry">Save your country</button>
+
+    <script>
+      $(document).ready(function(){
+        $("select.countries").change(function(){
+          var selectedCountry = $(this).children("option:selected").val();
+          document.getElementById('userCountry').textContent = 'from ' + selectedCountry;
+          document.getElementById('userCountry').setAttribute('value', selectedCountry);
+        });
+      });
+    </script>
+
     <h1>Guess the number game!</h1>
-    <h3>=================================================================================================================================================</h3>
+    <hr>
     <h2>A random number between 1 and 100 has bee chosen. There will be hints if your gess was too high or low.</h2>
 
     <a href="https://domainjyri.me/JS/beginner-html-site-styled-gh-pages/gameresults/">Load data from local storage</a>
@@ -79,7 +95,6 @@
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
-    <h2 id="blobTxt" style="background-color: springgreen;">Here will be your guesses readen from blob object</h2>
     <div class="resetBtn"></div>
 
 
@@ -136,25 +151,39 @@
 
     </div>
 
-    <h1>List of countries</h1>
-    <label for="countries">Choose a country:</label>
 
-    <select class="countries">
-      
-    </select>
-    <button id="setCountry">Save your country</button>
 
-    <script>
-      $(document).ready(function(){
-        $("select.countries").change(function(){
-          var selectedCountry = $(this).children("option:selected").val();
-          document.getElementById('userCountry').textContent = 'from ' + selectedCountry;
-          document.getElementById('userCountry').setAttribute('value', selectedCountry);
-        });
-      });
-    </script>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="playerPick">
+      <p>Who do you want to play as?</p>
+      <p>player 1 goes first</p>
+      <button style="font-size: 30px;" id="circle" onclick="tttStart('circle')">O</button>
+      <button style="font-size: 30px;" id="cross" onclick="tttStart('cross')">X</button>
+    </div>
+    <div>
+      <p id="player1">player 1:</p>
+      <p id="player2">player 2:</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container" id="tttGrid" >
+      <div class="nr1" style="border-top: solid; border-right: solid; font-size: 50px;" onclick="theGame('c1')" id="c1"></div>
+      <div class="nr2" style="border-top: solid; border-right: solid; font-size: 50px;" onclick="theGame('c2')" id="c2"></div>
+      <div class="nr3" style="border-top: solid; font-size: 50px;" onclick="theGame('c3')" id="c3"></div>
+      <div class="nr4" style="border-top: solid; border-right: solid; font-size: 50px;" onclick="theGame('c4')" id="c4"></div>
+      <div class="nr5" style="border-top: solid; border-right: solid; font-size: 50px;" onclick="theGame('c5')" id="c5"></div>
+      <div class="nr6" style="border-top: solid; font-size: 50px;" onclick="theGame('c6')" id="c6"></div>
+      <div class="nr7" style="border-right: solid; font-size: 50px;" onclick="theGame('c7')" id="c7"></div>
+      <div class="nr8" style="border-right: solid; font-size: 50px;" onclick="theGame('c8')" id="c8"></div>
+      <div class="nr9" style="font-size: 50px;" onclick="theGame('c9')" id="c9"></div>
+    </div>
+    <div class="tttBtn"></div>
 
     <script type="text/javascript" src="scripts/theGame.js"></script>
+    <script type="text/javascript" src="scripts/tttGame.js"></script>
     <script type="text/javascript" src="gameresults/countries.js"></script>
     <script type="text/javascript" src="gameresults/gameSessions.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
