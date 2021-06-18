@@ -28,7 +28,7 @@ alertButton.onclick = function() {
 
 if(localStorage.getItem('name')) {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Hello, ' + storedName;
+  myHeading.innerHTML = 'Hello, ' + storedName;
 }
 
 //calls a prompt for username
@@ -40,7 +40,7 @@ function setUserName() {
   } else {
     storedName = localStorage.setItem('name', myName);
   }
-  location.reload();
+  //location.reload();
 
 }
 
