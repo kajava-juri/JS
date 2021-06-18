@@ -119,7 +119,10 @@ function winCheck(player){
         winLose = true;
         gameOver();
     }
-    console.log(cells);
+    if(pTurn == 10){
+        winLose = true;
+        gameOver();
+    }
 }
 function gameOver(){
     saveData();
