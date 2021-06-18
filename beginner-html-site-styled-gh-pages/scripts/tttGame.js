@@ -142,8 +142,8 @@ function tttResetGame(){
     
     firstTime = true;
     winLose = false;
-    Player2 = '';
-    Player1 = '';
+    Player2 = 'player2: ';
+    Player1 = 'player1: ';
     pTurn = 1;
     circleButton.disabled = false;
     crossButton.disabled = false;
