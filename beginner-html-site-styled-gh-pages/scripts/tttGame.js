@@ -132,7 +132,7 @@ function gameOver(){
 
 function tttResetGame(){
     for(let i = 0; i < grid.children.length; i++) {
-        grid.children[i].innerHTML = '';
+        grid.children[i].children[0].innerHTML = '';
         grid.children[i].style.backgroundColor = '#3c9cc5';
     }
     
