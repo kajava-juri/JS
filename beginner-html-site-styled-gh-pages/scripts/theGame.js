@@ -143,6 +143,7 @@ function saveResult(){
   for(let i = 0; i < guessesArray.length; i++) {
     result.push({guess : guessesArray[i], result : lastArray[i], number : numberArray[i]})
   }
+  console.log(result);
 
   const resultObj = {result};
   const stringified = JSON.stringify(resultObj);
