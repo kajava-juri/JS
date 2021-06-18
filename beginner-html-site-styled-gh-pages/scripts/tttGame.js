@@ -119,7 +119,7 @@ function winCheck(player){
         winLose = true;
         gameOver();
     }
-    if(pTurn == 10){
+    if(pTurn == 9){
         winLose = true;
         gameOver();
     }
