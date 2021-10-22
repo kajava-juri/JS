@@ -1,0 +1,60 @@
+/*siin on css */
+
+h1 {
+	top: 72pt;
+	left: 101pt;
+	width:fit-content;
+	height: 53pt;
+	text-align: left;
+	font: normal normal bold 44pt/53pt Verdana;
+	letter-spacing: 0pt;
+	color: #A3D395;
+	opacity: 1;
+}
+
+body {
+
+	width: 70%;
+	height: 786px;
+	align-content: center;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	opacity: 1;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+a {
+	width: 49pt;
+	height: 29pt;
+	text-align: left;
+	text-decoration: underline;
+	font: normal normal normal 24pt/29pt Verdana;
+	letter-spacing: 0pt;
+	color: #50A8FF;
+	opacity: 1;
+}
+
+h2 {
+	width: fit-content;
+	height: 29pt;
+	text-align: left;
+	font: normal normal bold 24pt/29pt Verdana;
+	letter-spacing: 0.24pt;
+	color: #709665;
+	text-transform: uppercase;
+	opacity: 1;
+}
+
+p {
+	text-align: left;
+	font: normal normal normal 18pt/26pt Times;
+	letter-spacing: 0pt;
+	color: #707070;
+}
+
+span {
+	letter-spacing: 0pt;
+	text-align: left;
+	width: 91pt;
+	height: 19pt;
+}

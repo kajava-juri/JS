@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+span{
+	display: inline-block;
+}
+
+body {
+	font-size: 24px;
+}
+
+
+/* 1. Kirjuta font-size kasutades nii, et kõik loomad oleksid proportsionaalselt õige suurusega - siil kõige väiksem ning sinivaal kõige suurem. */
+
+/* 2. Lisa loomadele värv (background-color) https://developer.mozilla.org/en-US/docs/Web/CSS/color_value */
+
+/* 3. Tekita pealkirjale pikkus looma kiirus km/h = width ühikus vw */
+
+/* 4. Proovi mis muutub kui muudad body font-size suurust */
+
+/* 5. Pane tunnile, minutile ja sekundile fondi suurus paika võrdeliselt ühiku suurusele.
+		Kasuta kirja suuruse määramisel em-i. */
+
+/* 6. Venita nädalapäevad laiali kasutades % --> */
+
+

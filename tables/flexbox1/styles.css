@@ -1,0 +1,106 @@
+.uudiskiri2{
+    text-align: center;
+    background-color: #79b5ce;
+    padding: 1rem;
+    margin: auto;
+    width: -webkit-fill-available;
+    height: 102px;
+    vertical-align: middle;
+    line-height: 102px;
+}
+body{
+    margin: auto;
+    margin-top: 4%;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    row-gap: 20px;
+}
+.section{
+    flex: 40%;
+    word-break: break-all;
+    padding: 1rem;
+}
+.main{
+    width: 80%;
+    margin: auto;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+
+}
+
+.text{
+    font-size: 20px;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#row1-1{
+    margin-right: 0%;
+    margin-top: 0%;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+
+}
+#row1-2{
+    margin-left: 0%;
+    margin-top: 0%;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+#row2-1{
+    border-right: 1px solid;
+    padding-left: 0px;
+    padding-right: 2rem;
+    padding-top: 0px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+}
+
+#row2-2{
+    padding-top: 0px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+}
+
+#row2-header1{
+    margin:0px;
+}
+#row2-header2{
+    margin:0px;
+}
+
+.line{
+    flex:100%;
+}
+
+.onecolumn{
+    flex: 100%;
+    background-color: #edf3f9;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 53px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

@@ -1,0 +1,23 @@
+/* siin on stiilid */
+
+
+/* tee sellest shorthand siia järgi https://developer.mozilla.org/en-US/docs/Web/CSS/font#live_sample */
+
+h1 {
+	font-family: Arial;
+	font-size: 28px;
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+/*shorthand siia: */
+h1 {
+	font: italic small-caps bold 28px/34px "Arial";
+}
+h2 {
+	display: inline;
+	background: cadetblue;
+}
+

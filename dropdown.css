@@ -1,0 +1,52 @@
+/*
+
+Listide stiilimine infoks:  https://developer.mozilla.org/en-US/docs/Web/CSS/list-style 
+
+1. pane peamised menüü elemendid ühte ritta https://developer.mozilla.org/en-US/docs/Web/CSS/display
+2. peida drop-down menüü ära ja tee see nähtavaks ilmuvaks peamenüü elemendile hoverides 
+display:  none - https://developer.mozilla.org/en-US/docs/Web/CSS/display
+:hover https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+3. Viimaks kujunda menüü ära (lisa taust, font, hover efektid)
+
+*/
+
+
+/*
+ol {
+	position: absolute;
+	top: 1em;
+	left: 0;
+}
+*/
+
+ol  {
+    display: none;
+    list-style:inside;
+}
+
+li{
+    width: 80%;
+    list-style-type: none;
+}
+
+ul li { 
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 40px;
+    
+}
+
+ul > li {
+    background-color:darkgray;
+    transition: background-color .5s;
+}
+
+/*
+ ul > li:hover ol {
+    display: contents;
+}
+*/
+
+ul > li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+} 

@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link href="dropdown.css" rel="stylesheet" />
+    <script src="main.js" lang="javascript"></script>
+  </head>
   <body>
-    <form action="https://domainjyri.me/JS/beginner-html-site-styled-gh-pages/">
-      <input type="submit" value="First page with a bunch of beginner stuff"/>
-    </form>
-    <label for="forms">A form that sends data via POST method and is handled with PHP</label>
-    <a id="forms" href="http://domainjyri.me/JS/forms/forms.html"><button>Forms</button></a>
-    <br>
-    <label for="random">Different menus and stuff</label>
-    <a id="random" href="http://domainjyri.me/JS/random"><button>Click me</button></a>
+
+    <h1>Drop-down list (onclick)</h1>
+
+    <ul>
+    	<li onclick="openMenu(1)">First sites
+    	<ol id="menu1" class="menus">
+    		<li><a href="https://domainjyri.me/JS/beginner-html-site-styled-gh-pages/" target="_">First page with a bunch of beginner stuff</a></li>
+    		<li><a href="http://domainjyri.me/JS/random" target="_">Different menus and stuff</a></li>
+    	</ol>
+    	</li>
+    	<li onclick="openMenu(2)">Text formatting
+    	<ol id="menu2" class="menus">
+        <li><a href="http://domainjyri.me/JS/formatting/format1" target="_">format1</a></li>
+        <li><a href="http://domainjyri.me/JS/formatting/format2" target="_">format2</a></li>
+        <li><a href="http://domainjyri.me/JS/formatting/format3" target="_">format3</a></li>
+        <li><a href="http://domainjyri.me/JS/formatting/format4" target="_">format4</a></li>
+    	</ol>
+    	</li>
+    	<li onclick="openMenu(3)">Tables
+    	<ol id="menu3" class="menus">
+        <li><a href="http://domainjyri.me/JS/tables/flexbox1" target="_">flexbox</a></li>
+        <li><a href="http://domainjyri.me/JS/tables" target="_">Newspaper</a></li>
+    	</ol>
+    	</li>
+    </ul>
   </body>
 </html>
